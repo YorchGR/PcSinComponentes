@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicio">
+
+    <fragment
+        android:id="@+id/inicio"
+        android:name="com.jorgelopezendrina.pcsincomponentes.view.Inicio"
+        android:label="fg_inicio"
+        tools:layout="@layout/fg_inicio" >
+        <action
+            android:id="@+id/ac_inicio_to_RVElementos"
+            app:destination="@id/RVElementos" />
+    </fragment>
+    <fragment
+        android:id="@+id/RVElementos"
+        android:name="com.jorgelopezendrina.pcsincomponentes.view.RVElementos"
+        android:label="fg_rv_elementos"
+        tools:layout="@layout/fg_rv_elementos" >
+        <action
+            android:id="@+id/ac_RVElementos_to_verInformatico"
+            app:destination="@id/verInformatico" />
+        <action
+            android:id="@+id/ac_RVElementos_to_verOrdenador"
+            app:destination="@id/verOrdenador" />
+    </fragment>
+    <fragment
+        android:id="@+id/verInformatico"
+        android:name="com.jorgelopezendrina.pcsincomponentes.view.VerInformatico"
+        android:label="fg_ver_informatico"
+        tools:layout="@layout/fg_ver_informatico" >
+        <action
+            android:id="@+id/ac_verInformatico_to_inicio"
+            app:destination="@id/inicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/verOrdenador"
+        android:name="com.jorgelopezendrina.pcsincomponentes.view.VerOrdenador"
+        android:label="fg_ver_ordenador"
+        tools:layout="@layout/fg_ver_ordenador" >
+        <action
+            android:id="@+id/ac_verOrdenador_to_inicio"
+            app:destination="@id/inicio" />
+    </fragment>
+</navigation>
